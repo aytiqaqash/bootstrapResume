@@ -28,3 +28,8 @@ Route::get('/portfolio', function () {
 Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
