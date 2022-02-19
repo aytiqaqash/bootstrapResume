@@ -28,13 +28,7 @@
         <div class="text-center">
             <span class="badge badge-white badge-pill profile-designation">UI / UX Designer</span>
         </div>
-        <nav class="social-links">
-            <a href="#!" class="social-link"><i class="fab fa-facebook-f"></i></a>
-            <a href="#!" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a href="#!" class="social-link"><i class="fab fa-behance"></i></a>
-            <a href="#!" class="social-link"><i class="fab fa-dribbble"></i></a>
-            <a href="#!" class="social-link"><i class="fab fa-github"></i></a>
-        </nav>
+       {{menu('socialMedia','components.socialMedia')}}
         <div class="widget">
             <h5 class="widget-title">personal information</h5>
             <div class="widget-content">
