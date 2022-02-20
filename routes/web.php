@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('pages.home');
+    $summary = \App\Models\Summary::first();
+    return view('pages.home',compact('summary'));
 })->name('home');
 Route::get('/home', function () {
     return view('pages.home');
