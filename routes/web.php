@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\BlogPageController;
+use App\Http\Controllers\ContactPageController;
+use App\Http\Controllers\HomePageController;
+use App\Http\Controllers\PortfolioPageController;
+use App\Http\Controllers\ResumePageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,26 +18,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $summary = \App\Models\Summary::first();
-    return view('pages.home',compact('summary'));
-})->name('home');
-Route::get('/home', function () {
-    return view('pages.home');
-})->name('home');
-Route::get('/blog', function () {
-    return view('pages.blog');
-})->name('blog');
-Route::get('/resume', function () {
-    return view('pages.resume');
-})->name('resume');
-Route::get('/portfolio', function () {
-    return view('pages.portfolio');
-})->name('portfolio');
-Route::get('/contact', function () {
-    return view('pages.contact');
-})->name('contact');
-
+Route::get('/',[HomePageController::class,'goster'])->name('home');
+Route::get('/home', [HomePageController::class,'goster'])->name('home');
+Route::get('/blog', [BlogPageController::class,'goster'])->name('blog');
+Route::get('/resume', [ResumePageController::class,'goster'])->name('resume');
+Route::get('/portfolio', [PortfolioPageController::class,'goster'])->name('portfolio');
+Route::get('/contact', [ContactPageController::class,'goster'])->name('contact');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
