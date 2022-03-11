@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogPageController;
 use App\Http\Controllers\ContactPageController;
+use App\Http\Controllers\EducationController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\PortfolioPageController;
 use App\Http\Controllers\ResumePageController;
@@ -25,6 +26,7 @@ Route::get('/resume', [ResumePageController::class,'goster'])->name('resume');
 Route::get('/portfolio', [PortfolioPageController::class,'goster'])->name('portfolio');
 Route::get('/contact', [ContactPageController::class,'goster'])->name('contact');
 
+Route::get('/educations',[EducationController::class,'getAllEducations']);
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

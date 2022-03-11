@@ -12,29 +12,14 @@
                 <h6 class="section-subtitle">RESUME</h6>
                 <h2 class="section-title">EDUCATION</h2>
                 <ul class="time-line">
+                    @foreach($educations as $education)
                     <li class="time-line-item">
-                        <span class="badge badge-primary">1998 - 2005</span>
-                        <h6 class="time-line-item-title">Master In Computer Science</h6>
-                        <p class="time-line-item-subtitle">MASTER, UNIVERSITY</p>
-                        <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla
-                            vitae, interdum sed tortor.</p>
+                        <span class="badge badge-primary">{{$education->years}}</span>
+                        <h6 class="time-line-item-title">{{$education->major}}</h6>
+                        <p class="time-line-item-subtitle">{{$education->degree}}, {{$education->school}}</p>
+                       {!! $education->description !!}
                     </li>
-                    <li class="time-line-item">
-                        <span class="badge badge-primary">1995 - 1998</span>
-                        <h6 class="time-line-item-title">Studied at Harvard University</h6>
-                        <p class="time-line-item-subtitle">UNIVERSITY</p>
-                        <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla
-                            vitae, interdum sed tortor.
-                        </p>
-                    </li>
-                    <li class="time-line-item">
-                        <span class="badge badge-primary">1993 - 1995</span>
-                        <h6 class="time-line-item-title">Studied at Oxford University</h6>
-                        <p class="time-line-item-subtitle">UNIVERSITY</p>
-                        <p class="time-line-item-content">Mauris magna sapien, pharetra consectetur fringilla
-                            vitae, interdum sed tortor.
-                        </p>
-                    </li>
+                    @endforeach
                 </ul>
             </div>
             <div class="col-lg-6">

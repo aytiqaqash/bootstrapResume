@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Education;
 use Illuminate\Http\Request;
 
 class HomePageController extends Controller
 {
     public function goster(){
         $summary = \App\Models\Summary::first();
-        return view('pages.home',compact('summary'));
+        $educations = Education::get();
+        return view('pages.home',compact('summary','educations'));
     }
 }
