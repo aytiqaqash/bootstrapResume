@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Education;
 use App\Models\Experience;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class HomePageController extends Controller
@@ -12,6 +13,7 @@ class HomePageController extends Controller
         $summary = \App\Models\Summary::first();
         $educations = Education::get();
         $experiences = Experience::get();
-        return view('pages.home',compact('summary','educations', 'experiences'));
+        $services = Service::get();
+        return view('pages.home',compact('summary','educations', 'experiences','services'));
     }
 }
