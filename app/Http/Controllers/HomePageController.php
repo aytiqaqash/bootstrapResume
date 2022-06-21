@@ -14,6 +14,7 @@ class HomePageController extends Controller
         $educations = Education::get();
         $experiences = Experience::get();
         $services = Service::get();
-        return view('pages.home',compact('summary','educations', 'experiences','services'));
+        $carouselItems = CarouselController::getCarouselItems();
+        return view('pages.home',compact('summary','educations', 'experiences','services','carouselItems'));
     }
 }

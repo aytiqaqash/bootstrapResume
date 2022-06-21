@@ -59,29 +59,18 @@
     <section class="testimonial-section">
         <div id="testimonialCarousel" class="testimonial-carousel carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <p class="testimonial-content">Mauris magna sapien, pharetra consectetur fringilla vitae,
-                        interdum sed tortor.</p>
-                    <img src="assets/images/Profile.png" alt="profile" class="testimonial-img">
-                    <p class="testimonial-name">Nout Golstein</p>
+                @foreach($carouselItems as $index => $carouselItem)
+                    <div class="carousel-item {{$index==0?"active":""}}">
+                    <p class="testimonial-content">{{$carouselItem->description}}</p>
+                    <img src="{{Storage::url($carouselItem->image)}}" alt="profile" class="testimonial-img">
+                    <p class="testimonial-name">{{$carouselItem->title}}</p>
                 </div>
-                <div class="carousel-item">
-                    <p class="testimonial-content">Mauris magna sapien, pharetra consectetur fringilla vitae,
-                        interdum sed tortor.</p>
-                    <img src="assets/images/Profile.png" alt="profile" class="testimonial-img">
-                    <p class="testimonial-name">Nout Golstein</p>
-                </div>
-                <div class="carousel-item">
-                    <p class="testimonial-content">Mauris magna sapien, pharetra consectetur fringilla vitae,
-                        interdum sed tortor.</p>
-                    <img src="assets/images/Profile.png" alt="profile" class="testimonial-img">
-                    <p class="testimonial-name">Nout Golstein</p>
-                </div>
+                @endforeach
             </div>
             <ol class="carousel-indicators">
-                <li data-target="#testimonialCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#testimonialCarousel" data-slide-to="1"></li>
-                <li data-target="#testimonialCarousel" data-slide-to="2"></li>
+                @foreach($carouselItems as $index => $carouselItem)
+                <li data-target="#testimonialCarousel" data-slide-to="{{$index}}" class="{{$index==0?"active":""}}"></li>
+                @endforeach
             </ol>
         </div>
     </section>

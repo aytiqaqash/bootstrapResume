@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogPageController;
-use App\Http\Controllers\ContactPageController;
+use App\Http\Controllers\CarouselController;
 use App\Http\Controllers\ContactUsFormController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\HomePageController;
@@ -22,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[HomePageController::class,'goster'])->name('home');
 Route::get('/home', [HomePageController::class,'goster'])->name('home');
+Route::get('/carousel', [CarouselController::class,'getCarouselItems']);
 Route::get('/blog', [BlogPageController::class,'goster'])->name('blog');
 Route::get('/resume', [ResumePageController::class,'goster'])->name('resume');
 Route::get('/portfolio', [PortfolioPageController::class,'goster'])->name('portfolio');
