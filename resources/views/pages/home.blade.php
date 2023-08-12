@@ -4,7 +4,7 @@
     <section class="intro-section">
         <h2 class="section-title">{{$summary->title}}</h2>
         {!! $summary->text !!}
-        <a href="#!" class="btn btn-primary btn-hire-me">HIRE ME</a>
+        <a href="{{route("contact")}}" class="btn btn-primary btn-hire-me">HIRE ME</a>
     </section>
     <section class="resume-section">
         <div class="row">
