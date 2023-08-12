@@ -24,9 +24,9 @@
         <div class="profile-img-wrapper">
             <img src="assets/images/Profile.png" alt="profile">
         </div>
-        <h1 class="profile-name">Daisy Murphy</h1>
+        <h1 class="profile-name">Ziya Mammadov</h1>
         <div class="text-center">
-            <span class="badge badge-white badge-pill profile-designation">UI / UX Designer</span>
+            <span class="badge badge-white badge-pill profile-designation">Software Engineer</span>
         </div>
        {{menu('socialMedia','components.socialMedia')}}
         <div class="widget">
@@ -48,7 +48,7 @@
 
     @yield('content')
 
-        <footer>Live Resume @ <a href="https://www.bootstrapdash.com" target="_blank" rel="noopener noreferrer">BootstrapDash</a>. All Rights Reserved 2020</footer>
+        <footer>Live Resume @ <a href="https://ziyamammadov.us" target="_blank" rel="noopener noreferrer">ziyamammadov.us</a>. All Rights Reserved 2023</footer>
     </main>
 </div>
 <script src="assets/vendors/jquery/dist/jquery.min.js"></script>

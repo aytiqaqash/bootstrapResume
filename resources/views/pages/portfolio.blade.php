@@ -3,7 +3,7 @@
 @section('content')
 
     <section class="portfolio-section">
-        <h2 class="section-title">PORTFOLIO</h2>
+        <h2 class="section-title">CERTIFICATES</h2>
 
         <div class="portfolio-wrapper">
             <figure class="portfolio-item hover-box">
