@@ -20,12 +20,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[HomePageController::class,'goster'])->name('home');
+Route::get('/',[HomePageController::class,'goster']);
 Route::get('/home', [HomePageController::class,'goster'])->name('home');
-Route::get('/carousel', [CarouselController::class,'getCarouselItems']);
+//Route::get('/carousel', [CarouselController::class,'getCarouselItems']);
 Route::get('/blog', [BlogPageController::class,'goster'])->name('blog');
 Route::get('/resume', [ResumePageController::class,'goster'])->name('resume');
 Route::get('/portfolio', [PortfolioPageController::class,'goster'])->name('portfolio');
+Route::get('/certificates', [HomePageController::class,'inDevelopment'])->name('certificates');
 //Route::get('/contact', [ContactPageController::class,'goster'])->name('contact');
 Route::get('/contact', [ContactUsFormController::class,'createForm'])->name('contact');
 Route::post('/contact', [ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
