@@ -13,7 +13,7 @@
 
 <body>
 <header>
-    <button class="btn btn-white btn-share ml-auto mr-3 ml-md-0 mr-md-auto"><img src="assets/images/share.svg" alt="share" class="btn-img">
+    <button class="btn btn-white btn-share ml-auto mr-3 ml-md-0 mr-md-auto" onclick="shareOnFacebook();"><img src="assets/images/share.svg" alt="share" class="btn-img">
         SHARE</button>
     {{   menu('mainMenu', 'components.nav') }}
     <button class="btn btn-menu-toggle btn-white rounded-circle" data-toggle="collapsible-nav"
@@ -55,6 +55,12 @@
 <script src="assets/vendors/@popperjs/core/dist/umd/popper-base.min.js"></script>
 <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="assets/js/live-resume.js"></script>
+<script>
+    function shareOnFacebook(){
+        const navUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=' + 'https://ziyamammadov.us/';
+        window.open(navUrl , '_blank');
+    }
+</script>
 </body>
 
 </html>
