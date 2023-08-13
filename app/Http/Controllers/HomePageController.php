@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Education;
 use App\Models\Experience;
 use App\Models\Service;
+use Jorenvh\Share\Share;
 
 class HomePageController extends Controller
 {
@@ -14,7 +15,14 @@ class HomePageController extends Controller
         $experiences = Experience::get();
         $services = Service::get();
         $carouselItems = CarouselController::getCarouselItems();
-        return view('pages.home',compact('summary','educations', 'experiences','services','carouselItems'));
+        $shareComponent = new Share;
+        $shareComponent->page(env('APP_URL'), env("APP_NAME"))
+            ->facebook()
+            ->twitter()
+            ->linkedin('Extra linkedin summary can be passed here')
+            ->whatsapp()
+            ->getRawLinks();
+        return view('pages.home',compact('summary','educations', 'experiences','services','carouselItems','shareComponent'));
     }
 
     public function inDevelopment(){
