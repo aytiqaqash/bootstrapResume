@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title','Test')
+@section('title','Ziya Mammadov')
 @section('content')
     <section class="intro-section">
         <h2 class="section-title">{{$summary->title}}</h2>
