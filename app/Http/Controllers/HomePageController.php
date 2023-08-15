@@ -12,7 +12,7 @@ class HomePageController extends Controller
     public function goster(){
         $summary = \App\Models\Summary::first();
         $educations = Education::get();
-        $experiences = Experience::get();
+        $experiences = Experience::get()->sortByDesc("order");
         $services = Service::get();
         $carouselItems = CarouselController::getCarouselItems();
         $shareComponent = new Share;
